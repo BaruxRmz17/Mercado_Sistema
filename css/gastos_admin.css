@@ -13,3 +13,18 @@
 .submit-btn:hover {
     background-color: #025aa5;
 }
+
+/* Media Queries para hacerlo responsive */
+@media (max-width: 768px) {
+    .submit-btn {
+        font-size: 1em; /* Reduce el tamaño de fuente en pantallas más pequeñas */
+        padding: 10px;  /* Ajusta el padding para una mejor apariencia */
+    }
+}
+
+@media (max-width: 480px) {
+    .submit-btn {
+        font-size: 0.9em; /* Reduce aún más el tamaño de la fuente */
+        padding: 8px;    /* Reduce el padding */
+    }
+}

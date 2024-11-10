@@ -141,8 +141,8 @@ form {
 
 .comentario-item {
     padding: 20px;
-    border-color: #333; /* Fondo negro para comentarios */
-    color: #000000; /* Texto claro para buena legibilidad */
+    border-color: #333;
+    color: #000000;
     border: 1px solid #000;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
@@ -157,30 +157,70 @@ form {
 .comentario-item h4 {
     margin: 0 0 10px;
     font-size: 1.2em;
-    color: #000000; /* Color de título blanco */
+    color: #000000;
     font-weight: bold;
 }
 
 .comentario-item p {
     margin: 5px 0;
-    color: #636363; /* Color claro para el texto del comentario */
+    color: #636363;
 }
 
-/* Estilos responsivos */
+/* Media Queries para hacer el diseño responsive */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        gap: 15px;
-        padding: 20px;
+        align-items: flex-start;
     }
 
     .navbar ul {
         flex-direction: column;
-        align-items: center;
         gap: 15px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .header h2 {
+        font-size: 1.5em;
+    }
+
+    .form-group input {
+        font-size: 0.9em;
     }
 
     .comentarios-list {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar h1 {
+        font-size: 1.5em;
+    }
+
+    .navbar ul {
+        gap: 10px;
+    }
+
+    .form-group input {
+        font-size: 1em;
+    }
+
+    .comentario-item h4 {
+        font-size: 1em;
+    }
+
+    .comentario-item p {
+        font-size: 0.9em;
+    }
+
+    .submit-btn {
+        font-size: 1em;
+    }
+
+    .logout-btn {
+        font-size: 1em;
     }
 }

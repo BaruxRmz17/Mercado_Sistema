@@ -56,7 +56,6 @@ nav {
     display: flex;
     justify-content: flex-start; /* Alinea las opciones en una fila */
     gap: 30px; /* Espacio entre cada enlace */
-
 }
 
 nav ul {
@@ -103,7 +102,6 @@ nav a:hover {
     margin-top: 0;
     font-weight: 600;
 }
-
 
 /* News Form */
 #newsForm {
@@ -193,5 +191,60 @@ button:hover {
     nav ul {
         flex-direction: column;
         gap: 10px;
+        align-items: flex-start;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .logout-btn {
+        padding: 8px 16px;
+    }
+
+    .news-section, .all-news {
+        padding: 15px;
+    }
+
+    .news-section h2, .all-news h2 {
+        font-size: 1.4em;
+    }
+
+    #newsForm input, #newsForm textarea {
+        padding: 10px;
+    }
+
+    #newsForm button {
+        padding: 12px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .admin-container {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        gap: 8px;
+    }
+
+    .logout-btn {
+        padding: 6px 12px;
+    }
+
+    .news-section h2, .all-news h2 {
+        font-size: 1.2em;
+    }
+
+    #newsForm input, #newsForm textarea {
+        padding: 8px;
+    }
+
+    #newsForm button {
+        padding: 10px 14px;
     }
 }

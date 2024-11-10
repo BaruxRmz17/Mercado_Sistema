@@ -20,7 +20,7 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos del navbar */
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -56,11 +56,13 @@ body {
     border-radius: 6px;
 }
 
-.navbar ul li a:hover {
+.navbar ul li a:hover,
+.navbar ul li a:focus-visible {
     background-color: #004494;
     color: #ffffff;
 }
 
+/* Botón de logout */
 .logout-btn {
     padding: 8px 16px;
     background-color: #ff4b4b;
@@ -70,9 +72,11 @@ body {
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    will-change: transform;
 }
 
-.logout-btn:hover {
+.logout-btn:hover,
+.logout-btn:focus-visible {
     background-color: #d43a3a;
     transform: scale(1.05);
 }
@@ -116,11 +120,12 @@ form {
     transition: border-color 0.3s ease;
 }
 
-.form-group input:focus {
+.form-group input:focus-visible {
     border-color: #005bb5;
     outline: none;
 }
 
+/* Botón de envío */
 .submit-btn {
     padding: 12px;
     background-color: #005bb5;
@@ -130,9 +135,11 @@ form {
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    will-change: transform;
 }
 
-.submit-btn:hover {
+.submit-btn:hover,
+.submit-btn:focus-visible {
     background-color: #004494;
     transform: scale(1.02);
 }
@@ -152,6 +159,7 @@ form {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    will-change: transform;
 }
 
 .ingreso-item:hover {
@@ -190,5 +198,9 @@ form {
 
     .ingreso-item h3 {
         font-size: 1.2rem;
+    }
+
+    form {
+        padding: 15px;
     }
 }

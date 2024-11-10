@@ -17,22 +17,24 @@ body {
     padding: 20px;
 }
 
-/* Estilos del navbar */
+/* Navbar */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end; /* Alinea todo a la derecha */
     align-items: center;
     padding: 15px 25px;
     background-color: #005bb5;
     color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    will-change: transform; /* Mejora de rendimiento */
 }
 
 .navbar h1 {
     margin: 0;
     font-size: 1.8rem;
     font-weight: bold;
+    margin-right: auto; /* Para mantener el título separado */
 }
 
 .navbar ul {
@@ -52,11 +54,14 @@ body {
     border-radius: 5px;
 }
 
-.navbar ul li a:hover {
+.navbar ul li a:hover,
+.navbar ul li a:focus-visible {
     color: #fff;
     background-color: #004799;
+    outline: none;
 }
 
+/* Botón de logout */
 .logout-btn {
     padding: 8px 16px;
     background-color: #ff4b4b;
@@ -66,9 +71,11 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    will-change: transform; /* Mejora de rendimiento */
 }
 
-.logout-btn:hover {
+.logout-btn:hover,
+.logout-btn:focus-visible {
     background-color: #d43a3a;
     transform: scale(1.05);
 }
@@ -100,6 +107,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s, box-shadow 0.2s;
+    will-change: transform; /* Mejora de rendimiento */
 }
 
 .news-item:hover {
@@ -142,11 +150,20 @@ body {
         gap: 10px;
     }
 
+    .navbar h1 {
+        font-size: 1.6rem;
+        margin-right: 0; /* Evita margen al cambiar a columna */
+    }
+
     .news-header h2 {
         font-size: 1.8rem;
     }
 
     .news-item h3 {
         font-size: 1.4rem;
+    }
+
+    .news-item p {
+        font-size: 0.95rem;
     }
 }

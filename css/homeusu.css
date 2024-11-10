@@ -24,7 +24,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #005bb5;   
+    background-color: #005bb5;
     color: #fff;
     padding: 15px 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -36,6 +36,7 @@ header {
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap; /* Asegura que el contenido se ajuste en pantallas pequeñas */
 }
 
 header h1 {
@@ -161,4 +162,80 @@ button:hover {
 .comment-text {
     margin-top: 5px;
     color: #495057;
+}
+
+/* Responsive Design */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.3em;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+    }
+
+    header nav ul li a {
+        width: 100%;
+        text-align: center;
+        padding: 8px;
+    }
+
+    .logout-btn {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    #commentInput {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    button {
+        padding: 10px 16px;
+        font-size: 0.9em;
+    }
+
+    .comments-container {
+        max-height: 200px;
+    }
+
+    .comment {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .comment-author {
+        font-size: 0.95em;
+    }
+
+    .comment-text {
+        font-size: 0.85em;
+    }
 }

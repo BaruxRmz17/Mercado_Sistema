@@ -129,24 +129,67 @@ body {
     margin: 0;
 }
 
-/* Estilos responsivos */
+/* Media Queries para hacerlo responsive */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        padding: 20px;
+        align-items: flex-start;
     }
 
     .navbar ul {
         flex-direction: column;
-        align-items: center;
-        gap: 15px;
+        gap: 10px;
+    }
+
+    .container {
+        padding: 20px;
+        margin: 15px;
     }
 
     .header h2 {
         font-size: 1.6rem;
     }
 
-    .gastos-list h3 {
-        font-size: 1.2rem;
+    .gastos-list {
+        margin-top: 20px;
+    }
+
+    .gastos-list > div {
+        padding: 12px 18px;
+    }
+
+    .logout-btn {
+        padding: 7px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar h1 {
+        font-size: 1.5rem;
+    }
+
+    .navbar ul {
+        gap: 8px;
+    }
+
+    .container {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .header h2 {
+        font-size: 1.4rem;
+    }
+
+    .gastos-list > div {
+        padding: 10px 15px;
+    }
+
+    .logout-btn {
+        padding: 6px 12px;
+    }
+
+    .gastos-list p {
+        font-size: 0.9rem;
     }
 }
