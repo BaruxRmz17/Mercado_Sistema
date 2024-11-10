@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastos</title>
+    <link rel="stylesheet" href="css/gastos_usu.css"><!-- Asegúrate de tener un archivo CSS adecuado para "gastos" -->
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <h1>Hola</h1>
+            <ul>
+                <li><a href="homeusu.html">Inicio</a></li>
+                <li><a href="gastos_usu.html">Ver Gastos</a></li>
+                <li><a href="noticias_usu.html">Noticias</a></li>
+                <li><a href="ingresos_usu.html">Ver Ingresos</a></li>
+                <li><button id="logoutButton" class="logout-btn">Cerrar Sesión</button></li>
+            </ul>
+        </nav>
+
+        <header class="header">
+            <h2>Lista de Gastos</h2> <!-- Título modificado a "Lista de Gastos" -->
+        </header>
+
+        <main>
+            <section id="gastosSection"> <!-- Cambié la id de ingresos a gastos -->
+                <h3>Gastos Registrados</h3> <!-- Modificado de "Ingresos Registrados" a "Gastos Registrados" -->
+                <div id="gastosList" class="gastos-list"></div> <!-- Cambié la id de ingresosList a gastosList -->
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="js/gastos_usu.js"></script> <!-- Cambié el nombre del archivo JS -->
+</body>
+</html>

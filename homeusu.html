@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Usuario</title>
+    <link rel="stylesheet" href="css/homeusu.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Encabezado principal con mensaje de bienvenida, menú de navegación y botón de cierre de sesión -->
+        <header>
+            <div class="header-content">
+                <h1 id="welcomeMessage" aria-label="Bienvenida al usuario">Hola! Bienvenido!</h1>
+                <nav aria-label="Menú principal">
+                    <ul>
+                        <li><a href="gastos_usu.html" id="viewExpenses" aria-label="Ver Gastos">Ver Gastos</a></li>
+                        <li><a href="ingresos_usu.html" id="viewIncomes" aria-label="Ver Ingresos">Ver Ingresos</a></li>
+                        <li><a href="noticias_usu.html" id="viewNews" aria-label="Ver Noticias">Ver Noticias</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <button id="logoutButton" class="logout-btn" aria-label="Cerrar sesión">Cerrar sesión</button>
+        </header>
+
+        <!-- Contenido principal -->
+        <main>
+            <section class="comments-section" aria-labelledby="commentsHeader">
+                <h2 id="commentsHeader">Comentarios</h2>
+                
+                <!-- Formulario de comentarios -->
+                <form id="commentForm" aria-label="Formulario de comentarios">
+                    <label for="commentInput" class="visually-hidden">Escribe tu comentario</label>
+                    <textarea id="commentInput" placeholder="Escribe tu comentario aquí..." required aria-required="true"></textarea>
+                    <button type="submit" aria-label="Enviar comentario">Enviar</button>
+                </form>
+
+                <!-- Contenedor de comentarios -->
+                <div id="commentsContainer" class="comments-container" aria-live="polite" aria-atomic="true"></div>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="js/homeusu.js"></script>
+</body>
+</html>

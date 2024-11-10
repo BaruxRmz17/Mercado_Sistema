@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastos - Admin</title>
+    <link rel="stylesheet" href="css/ingresos_admin.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <h1>Hola</h1>
+            <ul>
+                <li><a href="home_admin.html" id="home_admin">Inicio</a></li>
+                <li><a href="gastos_admin.html" id="addExpenses">Agregar Gastos</a></li>
+                <li><a href="ingresos_admin.html" id="addIncomes">Agregar Ingresos</a></li>
+                <li><a href="comentarios_admin.html" id="addComent">Comentarios</a></li>
+                <li><button id="logoutButton" class="logout-btn">Cerrar Sesión</button></li>
+            </ul>
+        </nav>
+
+        <main>
+            <h2>Registrar Nuevo Gasto</h2>
+            <form id="gastoForm">
+                <div class="form-group">
+                    <label for="descripcion">Descripción:</label>
+                    <input type="text" id="descripcion" name="descripcion" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="monto">Monto:</label>
+                    <input type="number" min="0" step="0.01" id="monto" name="monto" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="locatario">Locatario:</label>
+                    <input type="text" id="locatario" name="locatario" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="num_local">Número de Local:</label>
+                    <input type="number" min="0" id="num_local" name="num_local" required>
+                </div>
+
+                <button class="submit-btn " type="submit">Agregar Gasto</button>
+            </form>
+
+            <section id="gastosSection">
+                <h3>Gastos Registrados</h3>
+                <div id="gastosList" class="gastos-list"></div>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="js/gastos_admin.js"></script>
+</body>
+</html>

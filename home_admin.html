@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Administrador</title>
+    <link rel="stylesheet" href="css/home_admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Header Section -->
+        <header>
+            <h1>Bienvenido, Administrador</h1>
+            <button id="logoutButton" class="logout-btn">Cerrar sesión</button>
+        </header>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="home_admin.html" id="home_admin">Inicio</a></li>
+                <li><a href="gastos_admin.html" id="addExpenses">Agregar Gastos</a></li>
+                <li><a href="ingresos_admin.html" id="addIncomes">Agregar Ingresos</a></li>
+                <li><a href="comentarios_admin.html" id="addComent">Comentarios</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <!-- News Posting Section -->
+            <section class="news-section">
+                <h2>Publicar Noticia</h2>
+                <form id="newsForm">
+                    <label for="newsTitle">Título de la noticia</label>
+                    <input type="text" id="newsTitle" placeholder="Título de la noticia" required>
+
+                    <label for="newsContent">Contenido de la noticia</label>
+                    <textarea id="newsContent" placeholder="Contenido de la noticia" required></textarea>
+
+                    <button type="submit">Publicar</button>
+                </form>
+            </section>
+
+            <!-- News Display Section -->
+            <section class="all-news">
+                <h2>Noticias Publicadas</h2>
+                <div id="newsContainer">
+                    <!-- Dynamic content will be loaded here -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="js/home_admin.js"></script>
+</body>
+</html>

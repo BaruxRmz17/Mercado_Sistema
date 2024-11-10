@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentarios - Administrador</title>
+    <link rel="stylesheet" href="css/comentarios_admin.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <h1>Hola!</h1>
+            <ul>
+                <li><a href="home_admin.html" id="home_admin">Inicio</a></li>
+                <li><a href="gastos_admin.html" id="addExpenses">Agregar Gastos</a></li>
+                <li><a href="ingresos_admin.html" id="addIncomes">Agregar Ingresos</a></li>
+                <li><a href="comentarios_admin.html" id="addComent">Comentarios</a></li>
+                <li><button id="logoutButton" class="logout-btn">Cerrar Sesión</button></li>
+            </ul>
+        </nav>
+
+        <header class="header">
+            <h2>Todos los Comentarios de los Usuarios</h2>
+        </header>
+
+        <main>
+            <section id="comentariosSection">
+                <h3>Lista de Comentarios</h3>
+                <div id="comentariosList" class="comentarios-list"></div>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="js/comentarios_admin.js"></script>
+</body>
+</html>
